@@ -36,37 +36,37 @@ public class MainActivity extends AppCompatActivity {
 
     public void middleLeftClick(View v)
     {
-        gridArray[0][0] = 1;
+        gridArray[1][0] = 1;
         Toast.makeText(this, "you clicked button 4", Toast.LENGTH_SHORT).show();
     }//end function for the Button 4
 
     public void middleMiddleClick(View v)
     {
-        gridArray[0][0] = 1;
+        gridArray[1][1] = 1;
         Toast.makeText(this, "you clicked button 5", Toast.LENGTH_SHORT).show();
     }//end function for the Button 5
 
     public void middleRightClick(View v)
     {
-        gridArray[0][0] = 1;
+        gridArray[1][2] = 1;
         Toast.makeText(this, "you clicked button 6", Toast.LENGTH_SHORT).show();
     }//end function for the Button 6
 
     public void bottomLeftClick(View v)
     {
-        gridArray[0][0] = 1;
+        gridArray[2][0] = 1;
         Toast.makeText(this, "you clicked button 7", Toast.LENGTH_SHORT).show();
     }//end function for the Button 7
 
     public void bottomMiddleClick(View v)
     {
-        gridArray[0][0] = 1;
+        gridArray[2][1] = 1;
         Toast.makeText(this, "you clicked button 8", Toast.LENGTH_SHORT).show();
     }//end function for the Button 8
 
     public void bottomRightClick(View v)
     {
-        gridArray[0][0] = 1;
+        gridArray[2][2] = 1;
         Toast.makeText(this, "you clicked button 9", Toast.LENGTH_SHORT).show();
     }//end function for the Button 9
 }
