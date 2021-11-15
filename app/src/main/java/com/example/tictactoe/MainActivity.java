@@ -3,6 +3,7 @@ package com.example.tictactoe;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -69,4 +70,7 @@ public class MainActivity extends AppCompatActivity {
         gridArray[2][2] = 1;
         Toast.makeText(this, "you clicked button 9", Toast.LENGTH_SHORT).show();
     }//end function for the Button 9
+
+    //draw condition (x = 1, o = 0)
+
 }
