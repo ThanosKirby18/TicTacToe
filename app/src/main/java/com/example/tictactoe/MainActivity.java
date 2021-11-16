@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //drawCondition();
+        // if gridArray is fully filled
     }
 
     public void topLeftClick(View v)
@@ -72,5 +75,21 @@ public class MainActivity extends AppCompatActivity {
     }//end function for the Button 9
 
     //draw condition (x = 1, o = 0)
+    public void drawCondition()
+    {
+
+
+        for(int i = 0; i < gridArray.length; i++)
+        {
+            for(int j = 0; j < gridArray[i].length; i++)
+            {
+                //if (gridArray[x][y] == 0 || == 1) && !winCondition
+                if(gridArray[i][j] == 0 || gridArray[i][j] == 1)
+                {
+                    Log.i("info", "This is a draw");
+                }
+            }
+        }
+    }
 
 }
