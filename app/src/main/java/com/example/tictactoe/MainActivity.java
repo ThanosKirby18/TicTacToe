@@ -28,18 +28,16 @@ public class MainActivity extends AppCompatActivity {
     {
         gridArray[0][0] = 1;
         Toast.makeText(this, "you clicked button 1", Toast.LENGTH_SHORT).show();
+
         playerTurn++;
         Log.i("count", "playerTurn count is " + playerTurn);
+        drawCondition();
     }//end function for the Button 1
 
     public void topMiddleClick(View v)
     {
         gridArray[0][1] = 1;
         Toast.makeText(this, "you clicked button 2", Toast.LENGTH_SHORT).show();
-        if(playerTurn == 10)
-        {
-            drawCondition();
-        }
     }//end function for the Button 2
 
     public void topRightClick(View v)
@@ -87,18 +85,12 @@ public class MainActivity extends AppCompatActivity {
     //draw condition (x = 1, o = 0)
     public void drawCondition()
     {
+        //if !winCondition
+        if(playerTurn == 10)
+        {
+            Log.i("info", "This is a draw");
+        }
 
-        //for(int i = 0; i < gridArray.length; i++)
-        //{
-            //for(int j = 0; j < gridArray[i].length; i++)
-            //{
-                //if (gridArray[x][y] == 0 || == 1) && !winCondition
-                //if(gridArray[i][j] == 0 || gridArray[i][j] == 1)
-                //{
-                    Log.i("info", "This is a draw");
-                //}
-            //}
-        //}
     }
 
 }
