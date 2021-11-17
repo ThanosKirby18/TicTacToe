@@ -15,13 +15,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //drawCondition();
-        // if max player turns is made
-        if(playerTurn == 10)
-        {
-            drawCondition();
-        }
     }
 
     public void topLeftClick(View v)
