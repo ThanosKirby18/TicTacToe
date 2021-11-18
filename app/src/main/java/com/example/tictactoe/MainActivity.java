@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
         gridArray[0][0] = 1;
         Toast.makeText(this, "you clicked button 1", Toast.LENGTH_SHORT).show();
 
-        drawCondition();
-
         winCondition();
+
+        drawCondition();
 
     }//end function for the Button 1
 
@@ -33,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
         gridArray[0][1] = 1;
         Toast.makeText(this, "you clicked button 2", Toast.LENGTH_SHORT).show();
 
-        drawCondition();
-
         winCondition();
+
+        drawCondition();
 
     }//end function for the Button 2
 
@@ -44,9 +44,9 @@ public class MainActivity extends AppCompatActivity {
         gridArray[0][2] = 1;
         Toast.makeText(this, "you clicked button 3", Toast.LENGTH_SHORT).show();
 
-        drawCondition();
-
         winCondition();
+
+        drawCondition();
 
     }//end function for the Button 3
 
@@ -55,10 +55,9 @@ public class MainActivity extends AppCompatActivity {
         gridArray[1][0] = 1;
         Toast.makeText(this, "you clicked button 4", Toast.LENGTH_SHORT).show();
 
+        winCondition();
 
         drawCondition();
-
-        winCondition();
 
     }//end function for the Button 4
 
@@ -67,10 +66,9 @@ public class MainActivity extends AppCompatActivity {
         gridArray[1][1] = 1;
         Toast.makeText(this, "you clicked button 5", Toast.LENGTH_SHORT).show();
 
+        winCondition();
 
         drawCondition();
-
-        winCondition();
 
     }//end function for the Button 5
 
@@ -79,9 +77,9 @@ public class MainActivity extends AppCompatActivity {
         gridArray[1][2] = 1;
         Toast.makeText(this, "you clicked button 6", Toast.LENGTH_SHORT).show();
 
-        drawCondition();
-
         winCondition();
+
+        drawCondition();
 
     }//end function for the Button 6
 
@@ -90,10 +88,9 @@ public class MainActivity extends AppCompatActivity {
         gridArray[2][0] = 1;
         Toast.makeText(this, "you clicked button 7", Toast.LENGTH_SHORT).show();
 
+        winCondition();
 
         drawCondition();
-
-        winCondition();
 
     }//end function for the Button 7
 
@@ -102,9 +99,9 @@ public class MainActivity extends AppCompatActivity {
         gridArray[2][1] = 1;
         Toast.makeText(this, "you clicked button 8", Toast.LENGTH_SHORT).show();
 
-        drawCondition();
-
         winCondition();
+
+        drawCondition();
 
     }//end function for the Button 8
 
@@ -112,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
     {
         gridArray[2][2] = 1;
         Toast.makeText(this, "you clicked button 9", Toast.LENGTH_SHORT).show();
-
+        winCondition();
 
         drawCondition();
     }//end function for the Button 9
@@ -128,9 +125,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
-        winCondition();
-    }//end function for the Button 9
 
     private int[][] fullGrid()
     {
