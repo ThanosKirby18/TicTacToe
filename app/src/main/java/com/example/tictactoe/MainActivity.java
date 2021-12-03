@@ -204,39 +204,39 @@ public class MainActivity extends AppCompatActivity {
 
     private void winCondition()
     {
-        for(int i = 0; i < 3;i++)
+        for(int i = 0; i < 4;i++)
         {
-            if(gridArray[i][0]== 1 && gridArray[i][1]== 1 && gridArray[i][2]== 1)
+            if(gridArray[i][0]== 1 && gridArray[i][1]== 1 && gridArray[i][2]== 1 && gridArray[i][3]==1)
             {
                 //Toast.makeText(this, "X wins the game", Toast.LENGTH_SHORT).show();
-            }
-            else if(gridArray[0][i]==1 && gridArray[1][i]==1 && gridArray[2][i]==1)
+            }//end if statement to check for win condition horizontally for X case
+            else if(gridArray[0][i]==1 && gridArray[1][i]==1 && gridArray[2][i]==1 && gridArray[3][i]==1)
             {
 
-            }
-            else if(gridArray[i][0]== 0 && gridArray[i][1]== 0 && gridArray[i][2]== 0)
+            }//end if statement to check for win condition vertically for X case
+            else if(gridArray[i][0]== 0 && gridArray[i][1]== 0 && gridArray[i][2]== 0 && gridArray[i][3]==0)
             {
 
-            }
-            else if(gridArray[0][i]==0 && gridArray[1][i]==0 && gridArray[2][i]==0)
+            }//end if statement to check for win condition horizontally for O case
+            else if(gridArray[0][i]==0 && gridArray[1][i]==0 && gridArray[2][i]==0 && gridArray[3][i]==0)
             {
 
-            }
+            }//end if statement to check for win condition vertically for O case
         }//end for loop to check for horizontal and vertical cases for wins
 
-        if(gridArray[0][0]==0 && gridArray[1][1]==0 && gridArray[2][2]==0)
+        if(gridArray[0][0]==0 && gridArray[1][1]==0 && gridArray[2][2]==0 && gridArray[3][3]==0)
         {
 
         }//checks case for diagonal from top left to bottom right for if O wins
-        else if(gridArray[0][2]==0 && gridArray[1][1]==0 && gridArray[2][0]==0)
+        else if(gridArray[0][3]==0 && gridArray[1][2]==0 && gridArray[2][1]==0 && gridArray[3][0]==0)
         {
 
         }//checks case for diagonal from top right to bottom left for if 0 wins
-        else if(gridArray[0][0]==1 && gridArray[1][1]==1 && gridArray[2][2]==1)
+        else if(gridArray[0][0]==1 && gridArray[1][1]==1 && gridArray[2][2]==1 && gridArray[3][3]==1)
         {
 
         }//checks case for diagonal from top left to bottom right for if X wins
-        else if(gridArray[0][2]==1 && gridArray[1][1]==1 && gridArray[2][0]==1)
+        else if(gridArray[0][3]==1 && gridArray[1][2]==1 && gridArray[2][1]==1 && gridArray[3][0]==1)
         {
 
         }//checks case for diagonal from top right to bottom left for if X wins
