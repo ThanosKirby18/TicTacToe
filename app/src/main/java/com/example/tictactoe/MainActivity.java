@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void topLeftClick(View v)
+    public void firstRowLeftClick(View v)
     {
         gridArray[0][0] = 1;
         Toast.makeText(this, "you clicked button 1", Toast.LENGTH_SHORT).show();
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     }//end function for the Button 1
 
-    public void topMiddleClick(View v)
+    public void firstRowMiddleLeftClick(View v)
     {
         gridArray[0][1] = 1;
         Toast.makeText(this, "you clicked button 2", Toast.LENGTH_SHORT).show();
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     }//end function for the Button 2
 
-    public void topRightClick(View v)
+    public void firstRowMiddleRightClick(View v)
     {
         gridArray[0][2] = 1;
         Toast.makeText(this, "you clicked button 3", Toast.LENGTH_SHORT).show();
@@ -50,7 +50,17 @@ public class MainActivity extends AppCompatActivity {
 
     }//end function for the Button 3
 
-    public void middleLeftClick(View v)
+    public void firstRowRightClick(View v)
+    {
+        gridArray[0][3] = 1;
+        Toast.makeText(this, "you clicked button 10", Toast.LENGTH_SHORT).show();
+
+        winCondition();
+
+        drawCondition();
+    }//end function for the button 10
+
+    public void secondRowLeftClick(View v)
     {
         gridArray[1][0] = 1;
         Toast.makeText(this, "you clicked button 4", Toast.LENGTH_SHORT).show();
@@ -61,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
     }//end function for the Button 4
 
-    public void middleMiddleClick(View v)
+    public void secondRowMiddleLeftClick(View v)
     {
         gridArray[1][1] = 1;
         Toast.makeText(this, "you clicked button 5", Toast.LENGTH_SHORT).show();
@@ -72,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
     }//end function for the Button 5
 
-    public void middleRightClick(View v)
+    public void secondRowMiddleRightClick(View v)
     {
         gridArray[1][2] = 1;
         Toast.makeText(this, "you clicked button 6", Toast.LENGTH_SHORT).show();
@@ -83,7 +93,17 @@ public class MainActivity extends AppCompatActivity {
 
     }//end function for the Button 6
 
-    public void bottomLeftClick(View v)
+    public void secondRowRightClick(View v)
+    {
+        gridArray[1][3] = 1;
+        Toast.makeText(this, "you clicked button 11", Toast.LENGTH_SHORT).show();
+
+        winCondition();
+
+        drawCondition();
+    }//end function for the Button 11
+
+    public void thirdRowLeftClick(View v)
     {
         gridArray[2][0] = 1;
         Toast.makeText(this, "you clicked button 7", Toast.LENGTH_SHORT).show();
@@ -94,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
     }//end function for the Button 7
 
-    public void bottomMiddleClick(View v)
+    public void thirdRowMiddleLeftClick(View v)
     {
         gridArray[2][1] = 1;
         Toast.makeText(this, "you clicked button 8", Toast.LENGTH_SHORT).show();
@@ -105,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
 
     }//end function for the Button 8
 
-    public void bottomRightClick(View v)
+    public void thirdRowMiddleRightClick(View v)
     {
         gridArray[2][2] = 1;
         Toast.makeText(this, "you clicked button 9", Toast.LENGTH_SHORT).show();
@@ -113,6 +133,51 @@ public class MainActivity extends AppCompatActivity {
 
         drawCondition();
     }//end function for the Button 9
+
+    public void thirdRowRightClick(View v)
+    {
+        gridArray[2][3] = 1;
+        Toast.makeText(this, "you clicked button 12", Toast.LENGTH_SHORT).show();
+        winCondition();
+
+        drawCondition();
+    }//end function for the Button 12
+
+    public void fourthRowLeftClick(View v)
+    {
+        gridArray[3][0] = 1;
+        Toast.makeText(this, "you clicked button 13", Toast.LENGTH_SHORT).show();
+        winCondition();
+
+        drawCondition();
+    }//end function for the Button 13
+
+    public void fourthRowMiddleLeftClick(View v)
+    {
+        gridArray[3][1] = 1;
+        Toast.makeText(this, "you clicked button 14", Toast.LENGTH_SHORT).show();
+        winCondition();
+
+        drawCondition();
+    }//end function for the BUtton 14
+
+    public void fourthRowMiddleRightClick(View v)
+    {
+        gridArray[3][2] = 1;
+        Toast.makeText(this, "you clicked button 15", Toast.LENGTH_SHORT).show();
+        winCondition();
+
+        drawCondition();
+    }//end function for the Button 15
+
+    public void fourthRowRightClick(View v)
+    {
+        gridArray[3][3] = 1;
+        Toast.makeText(this, "you clicked button 16", Toast.LENGTH_SHORT).show();
+        winCondition();
+
+        drawCondition();
+    }//end function for the Button 16
 
     //draw condition (x = 1, o = 0)
     public void drawCondition()
@@ -128,9 +193,9 @@ public class MainActivity extends AppCompatActivity {
 
     private int[][] fullGrid()
     {
-        int[][]grid = new int[3][3];
-        for(int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
+        int[][]grid = new int[4][4];
+        for(int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[i].length; j++) {
                 grid[i][j] = 2;
             }
         }
