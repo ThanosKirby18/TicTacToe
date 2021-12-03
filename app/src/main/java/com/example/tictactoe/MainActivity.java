@@ -184,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
     {
         playerTurn++;
         Log.i("count", "playerTurn count is " + playerTurn);
-        if(playerTurn == 10)
+        if(playerTurn == 17)
         {
             Log.i("info", "This is a draw");
         }
