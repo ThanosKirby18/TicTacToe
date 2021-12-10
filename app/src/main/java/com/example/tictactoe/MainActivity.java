@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private int [][]gridArray = fullGrid();
     private int [][]turnCheck = fullGrid();
     int playerTurn = 1;
+    boolean gameDone = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,20 +22,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void firstRowLeftClick(View v)
     {
-        if(turnCheck[0][0] == 2)
+        if(turnCheck[0][0] == 2 && !gameDone)
         {
             Button button1 = (Button)findViewById(R.id.button1);
             if(playerTurn % 2==1)
             {
                 gridArray[0][0] = 1;
-                Toast.makeText(this, "X", Toast.LENGTH_SHORT).show();
                 button1.setText("X");
                 turnCheck[0][0] = 1;
             }
             else
             {
                 gridArray[0][0] = 0;
-                Toast.makeText(this, "O", Toast.LENGTH_SHORT).show();
                 button1.setText("O");
                 turnCheck[0][0] = 1;
             }
@@ -48,20 +47,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void firstRowMiddleLeftClick(View v)
     {
-        if(turnCheck[0][1] == 2)
+        if(turnCheck[0][1] == 2 && !gameDone)
         {
             Button button = (Button)findViewById(R.id.button2);
             if(playerTurn % 2==1)
             {
                 gridArray[0][1] = 1;
-                Toast.makeText(this, "X", Toast.LENGTH_SHORT).show();
                 button.setText("X");
                 turnCheck[0][1] = 1;
             }
             else
             {
                 gridArray[0][1] = 0;
-                Toast.makeText(this, "O", Toast.LENGTH_SHORT).show();
                 button.setText("O");
                 turnCheck[0][1] = 1;
             }
@@ -74,20 +71,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void firstRowMiddleRightClick(View v)
     {
-        if(turnCheck[0][2] == 2)
+        if(turnCheck[0][2] == 2 && !gameDone)
         {
             Button button = (Button)findViewById(R.id.button3);
             if(playerTurn % 2==1)
             {
                 gridArray[0][2] = 1;
-                Toast.makeText(this, "X", Toast.LENGTH_SHORT).show();
                 button.setText("X");
                 turnCheck[0][2] = 1;
             }
             else
             {
                 gridArray[0][2] = 0;
-                Toast.makeText(this, "O", Toast.LENGTH_SHORT).show();
                 button.setText("O");
                 turnCheck[0][2] = 1;
             }
@@ -100,20 +95,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void firstRowRightClick(View v)
     {
-        if(turnCheck[0][3] == 2)
+        if(turnCheck[0][3] == 2 && !gameDone)
         {
             Button button = (Button)findViewById(R.id.button10);
             if(playerTurn % 2==1)
             {
                 gridArray[0][3] = 1;
-                Toast.makeText(this, "X", Toast.LENGTH_SHORT).show();
                 button.setText("X");
                 turnCheck[0][3] = 1;
             }
             else
             {
                 gridArray[0][3] = 0;
-                Toast.makeText(this, "O", Toast.LENGTH_SHORT).show();
                 button.setText("O");
                 turnCheck[0][3] = 1;
             }
@@ -125,20 +118,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void secondRowLeftClick(View v)
     {
-        if(turnCheck[1][0] == 2)
+        if(turnCheck[1][0] == 2 && !gameDone)
         {
             Button button = (Button)findViewById(R.id.button4);
             if(playerTurn % 2==1)
             {
                 gridArray[1][0] = 1;
-                Toast.makeText(this, "X", Toast.LENGTH_SHORT).show();
                 button.setText("X");
                 turnCheck[1][0] = 1;
             }
             else
             {
                 gridArray[1][0] = 0;
-                Toast.makeText(this, "O", Toast.LENGTH_SHORT).show();
                 button.setText("O");
                 turnCheck[1][0] = 1;
             }
@@ -150,20 +141,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void secondRowMiddleLeftClick(View v)
     {
-        if(turnCheck[1][1] == 2)
+        if(turnCheck[1][1] == 2 && !gameDone)
         {
             Button button = (Button)findViewById(R.id.button5);
             if(playerTurn % 2==1)
             {
                 gridArray[1][1] = 1;
-                Toast.makeText(this, "X", Toast.LENGTH_SHORT).show();
                 button.setText("X");
                 turnCheck[1][1] = 1;
             }
             else
             {
                 gridArray[1][1] = 0;
-                Toast.makeText(this, "O", Toast.LENGTH_SHORT).show();
                 button.setText("O");
                 turnCheck[1][1] = 1;
             }
@@ -175,20 +164,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void secondRowMiddleRightClick(View v)
     {
-        if(turnCheck[1][2] == 2)
+        if(turnCheck[1][2] == 2 && !gameDone)
         {
             Button button = (Button)findViewById(R.id.button6);
             if(playerTurn % 2==1)
             {
                 gridArray[1][2] = 1;
-                Toast.makeText(this, "X", Toast.LENGTH_SHORT).show();
                 button.setText("X");
                 turnCheck[1][2] = 1;
             }
             else
             {
                 gridArray[1][2] = 0;
-                Toast.makeText(this, "O", Toast.LENGTH_SHORT).show();
                 button.setText("O");
                 turnCheck[1][2] = 1;
             }
@@ -200,17 +187,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void secondRowRightClick(View v)
     {
-        if(turnCheck[1][3] == 2)
+        if(turnCheck[1][3] == 2 && !gameDone)
         {
             Button button = (Button) findViewById(R.id.button11);
             if (playerTurn % 2 == 1) {
                 gridArray[1][3] = 1;
-                Toast.makeText(this, "X", Toast.LENGTH_SHORT).show();
                 button.setText("X");
                 turnCheck[1][3] = 1;
             } else {
                 gridArray[1][3] = 0;
-                Toast.makeText(this, "O", Toast.LENGTH_SHORT).show();
                 button.setText("O");
                 turnCheck[1][3] = 1;
             }
@@ -221,17 +206,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void thirdRowLeftClick(View v)
     {
-        if(turnCheck[2][0] == 2)
+        if(turnCheck[2][0] == 2 && !gameDone)
         {
             Button button = (Button) findViewById(R.id.button7);
             if (playerTurn % 2 == 1) {
                 gridArray[2][0] = 1;
-                Toast.makeText(this, "X", Toast.LENGTH_SHORT).show();
                 button.setText("X");
                 turnCheck[2][0] = 1;
             } else {
                 gridArray[2][0] = 0;
-                Toast.makeText(this, "O", Toast.LENGTH_SHORT).show();
                 button.setText("O");
                 turnCheck[2][0] = 1;
             }
@@ -242,17 +225,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void thirdRowMiddleLeftClick(View v)
     {
-        if(turnCheck[2][1] == 2)
+        if(turnCheck[2][1] == 2 && !gameDone)
         {
             Button button = (Button) findViewById(R.id.button8);
             if (playerTurn % 2 == 1) {
                 gridArray[2][1] = 1;
-                Toast.makeText(this, "X", Toast.LENGTH_SHORT).show();
                 button.setText("X");
                 turnCheck[2][1] = 1;
             } else {
                 gridArray[2][1] = 0;
-                Toast.makeText(this, "O", Toast.LENGTH_SHORT).show();
                 button.setText("O");
                 turnCheck[2][1] = 1;
             }
@@ -263,17 +244,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void thirdRowMiddleRightClick(View v)
     {
-        if(turnCheck[2][2] == 2)
+        if(turnCheck[2][2] == 2 && !gameDone)
         {
             Button button = (Button) findViewById(R.id.button9);
             if (playerTurn % 2 == 1) {
                 gridArray[2][2] = 1;
-                Toast.makeText(this, "X", Toast.LENGTH_SHORT).show();
                 button.setText("X");
                 turnCheck[2][2] = 1;
             } else {
                 gridArray[2][2] = 0;
-                Toast.makeText(this, "O", Toast.LENGTH_SHORT).show();
                 button.setText("O");
                 turnCheck[2][2] = 1;
             }
@@ -284,17 +263,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void thirdRowRightClick(View v)
     {
-        if(turnCheck[2][3] == 2)
+        if(turnCheck[2][3] == 2 && !gameDone)
         {
             Button button = (Button) findViewById(R.id.button12);
             if (playerTurn % 2 == 1) {
                 gridArray[2][3] = 1;
-                Toast.makeText(this, "X", Toast.LENGTH_SHORT).show();
                 button.setText("X");
                 turnCheck[2][3] = 1;
             } else {
                 gridArray[2][3] = 0;
-                Toast.makeText(this, "O", Toast.LENGTH_SHORT).show();
+
                 button.setText("O");
                 turnCheck[2][3] = 1;
             }
@@ -305,17 +283,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void fourthRowLeftClick(View v)
     {
-        if(turnCheck[3][0] == 2)
+        if(turnCheck[3][0] == 2 && !gameDone)
         {
             Button button = (Button) findViewById(R.id.button13);
             if (playerTurn % 2 == 1) {
                 gridArray[3][0] = 1;
-                Toast.makeText(this, "X", Toast.LENGTH_SHORT).show();
+
                 button.setText("X");
                 turnCheck[3][0] = 1;
             } else {
                 gridArray[3][0] = 0;
-                Toast.makeText(this, "O", Toast.LENGTH_SHORT).show();
+
                 button.setText("O");
                 turnCheck[3][0] = 1;
             }
@@ -326,17 +304,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void fourthRowMiddleLeftClick(View v)
     {
-        if(turnCheck[3][1] == 2)
+        if(turnCheck[3][1] == 2 && !gameDone)
         {
             Button button = (Button) findViewById(R.id.button14);
             if (playerTurn % 2 == 1) {
                 gridArray[3][1] = 1;
-                Toast.makeText(this, "X", Toast.LENGTH_SHORT).show();
+
                 button.setText("X");
                 turnCheck[3][1] = 1;
             } else {
                 gridArray[3][1] = 0;
-                Toast.makeText(this, "O", Toast.LENGTH_SHORT).show();
+
                 button.setText("O");
                 turnCheck[3][1] = 1;
             }
@@ -347,17 +325,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void fourthRowMiddleRightClick(View v)
     {
-        if(turnCheck[3][2] == 2)
+        if(turnCheck[3][2] == 2 && !gameDone)
         {
             Button button = (Button) findViewById(R.id.button15);
             if (playerTurn % 2 == 1) {
                 gridArray[3][2] = 1;
-                Toast.makeText(this, "X", Toast.LENGTH_SHORT).show();
+
                 button.setText("X");
                 turnCheck[3][2] = 1;
             } else {
                 gridArray[3][2] = 0;
-                Toast.makeText(this, "O", Toast.LENGTH_SHORT).show();
+
                 button.setText("O");
                 turnCheck[3][2] = 1;
             }
@@ -368,17 +346,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void fourthRowRightClick(View v)
     {
-        if(turnCheck[3][3] == 2)
+        if(turnCheck[3][3] == 2 && !gameDone)
         {
             Button button = (Button) findViewById(R.id.button16);
             if (playerTurn % 2 == 1) {
                 gridArray[3][3] = 1;
-                Toast.makeText(this, "X", Toast.LENGTH_SHORT).show();
+
                 button.setText("X");
                 turnCheck[3][3] = 1;
             } else {
                 gridArray[3][3] = 0;
-                Toast.makeText(this, "O", Toast.LENGTH_SHORT).show();
+
                 button.setText("O");
                 turnCheck[3][3] = 1;
             }
@@ -417,37 +395,45 @@ public class MainActivity extends AppCompatActivity {
         {
             if(gridArray[i][0]== 1 && gridArray[i][1]== 1 && gridArray[i][2]== 1 && gridArray[i][3]==1)
             {
-                //Toast.makeText(this, "X wins the game", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "X wins the game", Toast.LENGTH_SHORT).show();
+                gameDone = true;
             }//end if statement to check for win condition horizontally for X case
             else if(gridArray[0][i]==1 && gridArray[1][i]==1 && gridArray[2][i]==1 && gridArray[3][i]==1)
             {
-
+                Toast.makeText(this, "X wins the game", Toast.LENGTH_SHORT).show();
+                gameDone = true;
             }//end if statement to check for win condition vertically for X case
             else if(gridArray[i][0]== 0 && gridArray[i][1]== 0 && gridArray[i][2]== 0 && gridArray[i][3]==0)
             {
-
+                Toast.makeText(this, "0 wins the game", Toast.LENGTH_SHORT).show();
+                gameDone = true;
             }//end if statement to check for win condition horizontally for O case
             else if(gridArray[0][i]==0 && gridArray[1][i]==0 && gridArray[2][i]==0 && gridArray[3][i]==0)
             {
-
+                Toast.makeText(this, "0 wins the game", Toast.LENGTH_SHORT).show();
+                gameDone = true;
             }//end if statement to check for win condition vertically for O case
         }//end for loop to check for horizontal and vertical cases for wins
 
         if(gridArray[0][0]==0 && gridArray[1][1]==0 && gridArray[2][2]==0 && gridArray[3][3]==0)
         {
-
+            Toast.makeText(this, "O wins the game", Toast.LENGTH_SHORT).show();
+            gameDone = true;
         }//checks case for diagonal from top left to bottom right for if O wins
         else if(gridArray[0][3]==0 && gridArray[1][2]==0 && gridArray[2][1]==0 && gridArray[3][0]==0)
         {
-
+            Toast.makeText(this, "O wins the game", Toast.LENGTH_SHORT).show();
+            gameDone = true;
         }//checks case for diagonal from top right to bottom left for if 0 wins
         else if(gridArray[0][0]==1 && gridArray[1][1]==1 && gridArray[2][2]==1 && gridArray[3][3]==1)
         {
-
+            Toast.makeText(this, "X wins the game", Toast.LENGTH_SHORT).show();
+            gameDone = true;
         }//checks case for diagonal from top left to bottom right for if X wins
         else if(gridArray[0][3]==1 && gridArray[1][2]==1 && gridArray[2][1]==1 && gridArray[3][0]==1)
         {
-
+            Toast.makeText(this, "X wins the game", Toast.LENGTH_SHORT).show();
+            gameDone = true;
         }//checks case for diagonal from top right to bottom left for if X wins
 
     }//method to check for win cases after each turn only for values of X and O being 1 and 0
