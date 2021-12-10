@@ -369,14 +369,25 @@ public class MainActivity extends AppCompatActivity {
     //draw condition (x = 1, o = 0)
     public void drawCondition()
     {
+        Button button = (Button) findViewById(R.id.buttonPlayerIndicator);
         playerTurn++;
-        Log.i("count", "playerTurn count is " + playerTurn);
+
         if(playerTurn == 17)
         {
-            Log.i("info", "This is a draw");
+            Toast.makeText(this, "Game is a Draw!", Toast.LENGTH_SHORT).show();
         }
 
-    }
+        if(playerTurn % 2 == 1)
+        {
+            button.setText("Player Turn: X");
+        }//end if statement to display its X turn
+        else
+        {
+            button.setText("Player Turn: O");
+        }//end if statement to display its O turn
+
+    }//end draw condition to check whether the game has ended in a draw
+
 
     private int[][] fullGrid()
     {
