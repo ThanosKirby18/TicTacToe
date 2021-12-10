@@ -388,6 +388,48 @@ public class MainActivity extends AppCompatActivity {
 
     }//end draw condition to check whether the game has ended in a draw
 
+    public void restartGame(View v)
+    {
+        Button button1 = (Button) findViewById(R.id.button1);
+        Button button2 = (Button) findViewById(R.id.button2);
+        Button button3 = (Button) findViewById(R.id.button3);
+        Button button4 = (Button) findViewById(R.id.button4);
+        Button button5 = (Button) findViewById(R.id.button5);
+        Button button6 = (Button) findViewById(R.id.button6);
+        Button button7 = (Button) findViewById(R.id.button7);
+        Button button8 = (Button) findViewById(R.id.button8);
+        Button button9 = (Button) findViewById(R.id.button9);
+        Button button10 = (Button) findViewById(R.id.button10);
+        Button button11 = (Button) findViewById(R.id.button11);
+        Button button12 = (Button) findViewById(R.id.button12);
+        Button button13 = (Button) findViewById(R.id.button13);
+        Button button14 = (Button) findViewById(R.id.button14);
+        Button button15 = (Button) findViewById(R.id.button15);
+        Button button16 = (Button) findViewById(R.id.button16);
+        Button buttonPlayerIndicator = (Button) findViewById(R.id.buttonPlayerIndicator);
+        button1.setText("Empty");
+        button2.setText("Empty");
+        button3.setText("Empty");
+        button4.setText("Empty");
+        button5.setText("Empty");
+        button6.setText("Empty");
+        button7.setText("Empty");
+        button8.setText("Empty");
+        button9.setText("Empty");
+        button10.setText("Empty");
+        button11.setText("Empty");
+        button12.setText("Empty");
+        button13.setText("Empty");
+        button14.setText("Empty");
+        button15.setText("Empty");
+        button16.setText("Empty");
+        buttonPlayerIndicator.setText("Player Turn: X");
+        gameDone = false;
+        gridArray = fullGrid();
+        turnCheck = fullGrid();
+        playerTurn = 1;
+
+    }//end restartGame method to completely restart the gameboard to play again
 
     private int[][] fullGrid()
     {
