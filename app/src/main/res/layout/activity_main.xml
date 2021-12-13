@@ -7,6 +7,61 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="320dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="110dp"
+            android:background="#E91E63" />
+        <View
+            android:layout_width="320dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="101dp"
+            android:background="#E91E63" />
+
+        <View
+            android:layout_width="320dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="101dp"
+            android:background="#E91E63" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="320dp"
+            android:background="#E91E63"
+            android:layout_marginTop="44dp"
+            android:layout_marginLeft="105dp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="320dp"
+            android:layout_marginLeft="202dp"
+            android:layout_marginTop="-320dp"
+            android:background="#E91E63" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="320dp"
+            android:layout_marginLeft="302dp"
+            android:layout_marginTop="-320dp"
+            android:background="#E91E63" />
+    </LinearLayout>
+
+
     <Button
         android:id="@+id/button1"
         android:layout_width="85dp"
